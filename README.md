@@ -35,6 +35,10 @@ $ mvn test
 
 Reporting
 ---
+Output will be displayed in the terminal for step results wrapped with<br>
+===============STEP RESULT==================<br>
+<br>
 If using run with cucumber reporting then; <br>
 Go to directory where you cloned the project to view cucumber report<br>
 Open ${your_dir}/TradeMeAPI/target/cucumber-reports/cucumber-html-reports/overview-features.html
+
