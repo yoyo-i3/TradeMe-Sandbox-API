@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<style>
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+.cucumber-react section {
+  margin-bottom: 1em;
+}
+.cucumber-react .status-passed {
+  color: #2CB14A;
+}
+.cucumber-react .status-skipped {
+  color: #00A0CC;
+}
+.cucumber-react .status-pending {
+  color: #FFAD33;
+}
+.cucumber-react .status-undefined {
+  color: #FFAD33;
+}
+.cucumber-react .status-ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .status-failed {
+  color: #BB0000;
+}
+.cucumber-react .status-unknown {
+  color: #B6BECB;
+}
+.cucumber-react .data-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .data-table th {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .data-table td {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .data-table td__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .data-table td__step {
+  flex-grow: 1;
+}
+.cucumber-react .examples-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .examples-table th {
+  padding: 0.3em;
+}
+.cucumber-react .examples-table th + th {
+  border: 1px solid #4B5662;
+}
+.cucumber-react .examples-table td {
+  padding: 0.3em;
+}
+.cucumber-react .examples-table td + td {
+  border: 1px solid #4B5662;
+}
+.cucumber-react .examples-table td + td__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .examples-table td + td__step {
+  flex-grow: 1;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .indent {
+  margin-left: 1em;
+}
+.cucumber-react .keyword {
+  font-weight: bold;
+}
+.cucumber-react .step {
+  padding: 0.1em;
+}
+.cucumber-react .step-text {
+  font-weight: normal;
+}
+.cucumber-react .step-param {
+  font-weight: normal;
+}
+.cucumber-react .step-container {
+  display: flex;
+}
+.cucumber-react .step-container__step {
+  flex-grow: 1;
+}
+.cucumber-react .text_status_icon_container {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .error-message {
+  padding: 0.5em;
+  margin: 0;
+  overflow: scroll;
+}
+.cucumber-react .tag-list {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .attachment {
+  background-color: #ebebeb;
+  padding: 0.5em;
+}
+.cucumber-react .attachment .attachment-icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .attachment-image {
+  margin-top: 1em;
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"12.1.1","implementation":{"name":"cucumber-jvm","version":"6.1.2"},"runtime":{"name":"Oracle Corporation","version":"12.0.2"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1593321640","nanos":828921400}}},{"source":{"uri":"file:///C:/Users/yoyo_/TradeMeAPI/src/test/resources/features/UsedCarsCategory.feature","data":"@TradeMeAPI\r\nFeature: TradeMe API tests for UsedCars Category\r\n  As a User\r\n  I want to run Used Cars category APIs\r\n  so that I can verify Used Cars category returns Used car brands info\r\n\r\n  Background:\r\n    Given I go to the Used Cars Category API\r\n    When I get list of Used Cars Brands\r\n\r\n  Scenario: Get Total Number of used cards brands available\r\n    Then Total Number of named brands of used cars available in the TradeMe UsedCars category is 76\r\n\r\n  Scenario Outline: Check Used Car brand availability\r\n    Then I verify that brand \u0027\u003cbrandName\u003e\u0027 does \u003cavailability\u003e in the Used Cars List\r\n\r\n    Examples:\r\n      | brandName     | availability |\r\n      | Kia           | exist        |\r\n      | Hispano Suiza | not exist    |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/yoyo_/TradeMeAPI/src/test/resources/features/UsedCarsCategory.feature","feature":{"location":{"line":2,"column":1},"tags":[{"location":{"line":1,"column":1},"name":"@TradeMeAPI","id":"a7780b45-92f2-4af3-aebb-1d8ff7a24048"}],"language":"en","keyword":"Feature","name":"TradeMe API tests for UsedCars Category","description":"  As a User\n  I want to run Used Cars category APIs\n  so that I can verify Used Cars category returns Used car brands info","children":[{"background":{"location":{"line":7,"column":3},"keyword":"Background","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I go to the Used Cars Category API","id":"28b21dda-ebfa-4c15-a4ea-c30ee6797eb8"},{"location":{"line":9,"column":5},"keyword":"When ","text":"I get list of Used Cars Brands","id":"76c3e1f0-f634-4ed9-82bb-8a9fba69a091"}],"id":"a91b7bea-98f1-407d-95af-1116b36d0a51"}},{"scenario":{"location":{"line":11,"column":3},"keyword":"Scenario","name":"Get Total Number of used cards brands available","steps":[{"location":{"line":12,"column":5},"keyword":"Then ","text":"Total Number of named brands of used cars available in the TradeMe UsedCars category is 76","id":"0916cff3-dbfa-456a-b50e-5cef70f3f1c4"}],"id":"492d1d4c-b9e9-499c-bf33-21dd3d4b2f10"}},{"scenario":{"location":{"line":14,"column":3},"keyword":"Scenario Outline","name":"Check Used Car brand availability","steps":[{"location":{"line":15,"column":5},"keyword":"Then ","text":"I verify that brand \u0027\u003cbrandName\u003e\u0027 does \u003cavailability\u003e in the Used Cars List","id":"ddb2cb18-2cbc-41e7-8feb-8a1ed7984bf3"}],"examples":[{"location":{"line":17,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":18,"column":7},"cells":[{"location":{"line":18,"column":9},"value":"brandName"},{"location":{"line":18,"column":25},"value":"availability"}],"id":"e1ebd46d-ff99-4dab-ab5e-09ca0f99545d"},"tableBody":[{"location":{"line":19,"column":7},"cells":[{"location":{"line":19,"column":9},"value":"Kia"},{"location":{"line":19,"column":25},"value":"exist"}],"id":"02eb3e2d-d716-407d-9cdb-6dc72ba5091a"},{"location":{"line":20,"column":7},"cells":[{"location":{"line":20,"column":9},"value":"Hispano Suiza"},{"location":{"line":20,"column":25},"value":"not exist"}],"id":"f39b9a96-7417-4d8f-88c1-60eec6d423e8"}],"id":"f73ea1af-64c2-433b-b39a-d04a6dd66b4f"}],"id":"f5d1d4d6-d759-4720-a49c-062eca901a4e"}}]}}},{"pickle":{"id":"2dc647b5-c7d0-4f1d-9c33-3da33d3c9322","uri":"file:///C:/Users/yoyo_/TradeMeAPI/src/test/resources/features/UsedCarsCategory.feature","name":"Get Total Number of used cards brands available","language":"en","steps":[{"text":"I go to the Used Cars Category API","id":"b4bcdd39-c569-4c81-8f0c-d0279502e3e5","astNodeIds":["28b21dda-ebfa-4c15-a4ea-c30ee6797eb8"]},{"text":"I get list of Used Cars Brands","id":"7233c489-51a9-4852-82bf-22428a55b020","astNodeIds":["76c3e1f0-f634-4ed9-82bb-8a9fba69a091"]},{"text":"Total Number of named brands of used cars available in the TradeMe UsedCars category is 76","id":"f95aa9fb-23c1-41c2-b9d1-4967f6b59396","astNodeIds":["0916cff3-dbfa-456a-b50e-5c
