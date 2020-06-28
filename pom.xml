@@ -127,7 +127,7 @@
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
-            <version>5.3.0</version>
+            <version>5.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -181,7 +181,7 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.3.0</version>
+                <version>5.0.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
@@ -191,11 +191,11 @@
                         </goals>
                         <configuration>
                             <projectName>TradeMe-API</projectName>
-                            <inputDirectory>target/cucumber-reports/json-reports</inputDirectory>
-                            <outputDirectory>target/cucumber-reports/</outputDirectory>
+                            <outputDirectory>${basedir}/target/cucumber-reports/</outputDirectory>
+                            <cucumberOutput>${basedir}/target/cucumber-reports/json-reports</cucumberOutput>
                             <buildNumber>1</buildNumber>
                             <jsonFiles>
-                                <param>target/cucumber-reports/json-reports/CucumberTestReport.json</param>
+                                <param>**/*.json</param>
                             </jsonFiles>
                         </configuration>
                     </execution>
