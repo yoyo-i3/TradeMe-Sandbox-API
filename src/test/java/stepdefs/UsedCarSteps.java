@@ -31,28 +31,34 @@ public class UsedCarSteps {
     public void getTotalUsedCarBrands(Integer brandCount) {
         Integer count = UsedCarsDetails.getSubcategoryList().size();
         assertThat(count, equalTo(brandCount));
-        System.out.println("Total Number of named brands of used cars available: " + brandCount);
+        System.out.println("===============STEP RESULT==================");
+        System.out.println("[INFO] Total Number of named brands of used cars available: " + brandCount);
+        System.out.println("===============STEP RESULT==================");
     }
 
     @Then("^I verify that brand '(.+)' does (.+) in the Used Cars List$")
     public void verifyBrandAvailabilityInUsedCars(String brandName, String availability) {
         String result = usedCars.subCategoryItemAvailability(usedCarsDetails.getApiResponse(), "Name",
                 brandName, availability);
-        System.out.println(result);
+        System.out.println("===============STEP RESULT==================");
+        System.out.println("[INFO] " + result);
+        System.out.println("===============STEP RESULT==================");
         assertThat(result, equalTo(
                 brandName + " brand does " + availability)
         );
-        if(brandName.equalsIgnoreCase("Kia")){
-            getKiaNumber();
-        }
     }
 
-    @And("^I check Kia Number$")
-    public void getKiaNumber() {
-        Integer KiaIndex = usedCars.requestSubCategoryAttribute_getIndex(usedCarsDetails.getApiResponse(),
-                "Name", "Kia");
-        String message = "The current Number of Kia cars listed: ";
-        System.out.println(message + usedCars.requestSubCategoryAttribute_getValuesList(
-                usedCarsDetails.getApiResponse()).get(KiaIndex).get("Number"));
+    @And("^I get the current Number of '(.+)' cars listed, if it exists$")
+    public void getBrandNumberIfExists(String brandName){
+        if (brandName.equalsIgnoreCase("Kia")) {
+            Integer KiaIndex = usedCars.requestSubCategoryAttribute_getIndex(usedCarsDetails.getApiResponse(),
+                    "Name", brandName);
+            String message = "The current Number of " + brandName + " cars listed: ";
+            System.out.println("===============STEP RESULT==================");
+            System.out.println("[INFO] " + message + usedCars.requestSubCategoryAttribute_getValuesList(
+                    usedCarsDetails.getApiResponse()).get(KiaIndex).get("Number"));
+            System.out.println("===============STEP RESULT==================");
+
+        }
     }
 }

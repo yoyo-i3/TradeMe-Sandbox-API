@@ -8,11 +8,12 @@ Feature: TradeMe API tests for UsedCars Category
     Given I go to the Used Cars Category API
     When I get list of Used Cars Brands
 
-  Scenario: Get Total Number of used cards brands available
+  Scenario: Get Total Number of used cars brands available
     Then Total Number of named brands of used cars available in the TradeMe UsedCars category is 76
 
   Scenario Outline: Check Used Car brand availability
     Then I verify that brand '<brandName>' does <availability> in the Used Cars List
+    And I get the current Number of '<brandName>' cars listed, if it exists
 
     Examples:
       | brandName     | availability |
