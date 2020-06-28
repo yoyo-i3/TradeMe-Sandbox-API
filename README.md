@@ -28,10 +28,10 @@ Download and run Automation Tests
 ---
 $ git clone -b develop https://github.com/yoyo-i3/TradeMe-Sandbox-API.git <br>
 $ cd TradeMe-Sandbox-API <br>
-==> To run with cucumber reporting
+==> To run with cucumber reporting<br>
 $ mvn verify test <br>
-==> To run without cucumber reporting
-$ mvn test
+==> To run without cucumber reporting<br>
+$ mvn test<br>
 
 Reporting
 ---
