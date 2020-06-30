@@ -1,5 +1,8 @@
+import apiServices.BaseService;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -15,7 +18,13 @@ import org.junit.runner.RunWith;
         },
         monochrome = true)
 public class RunTest {
-    @Test
-    public void RunTest(){
+
+    @Before
+    public static void setUp(){
+//        BaseService.deleteFileContent();
     }
+
+//    @Test
+//    public void RunTest(){
+//    }
 }
