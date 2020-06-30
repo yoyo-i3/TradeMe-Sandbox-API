@@ -19,7 +19,7 @@ public class UsedCars {
                         then().
                         assertThat().body("Subcategories." + subCategoryItem, hasItem(subCategoryItemValue));
                 result = subCategoryItemValue + " brand does " + availabilityCondition;
-            } else if (availabilityCondition.equalsIgnoreCase("not exist")) {
+            } else if (availabilityCondition.equalsIgnoreCase("NOT exist")) {
                 response.
                         then().
                         assertThat().body("Subcategories." + subCategoryItem, not(hasItem(subCategoryItemValue)));

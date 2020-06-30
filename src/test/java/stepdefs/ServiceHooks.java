@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import static apiServices.BaseService.*;
+
 public class ServiceHooks {
     private final UsedCarsDetails usedCarsDetails = new UsedCarsDetails();
 
@@ -24,7 +26,7 @@ public class ServiceHooks {
     }
 
     @After
-    public void embedScreenshot(Scenario scenario) {
+    public void tearDownTest(Scenario scenario) {
         if (scenario.isFailed()) {
             try {
                 usedCarsDetails.resetAll();

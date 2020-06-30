@@ -2,6 +2,7 @@ package domain;
 
 import io.restassured.response.Response;
 
+import java.io.File;
 import java.util.List;
 
 public class UsedCarsDetails {
@@ -11,6 +12,15 @@ public class UsedCarsDetails {
 
     private Response apiResponse;
     private static List<String> SubcategoryList;
+    private static File file;
+
+    public static File getFile() {
+        return file;
+    }
+
+    public static void setFile(File file) {
+        UsedCarsDetails.file = file;
+    }
 
     public Response getApiResponse() {
         return apiResponse;
@@ -31,7 +41,7 @@ public class UsedCarsDetails {
     public void resetAll(){
         setApiResponse(null);
         setSubcategoryList(null);
+        setFile(null);
     }
-
 
 }

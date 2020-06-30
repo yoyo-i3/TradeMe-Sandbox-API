@@ -18,4 +18,4 @@ Feature: TradeMe API tests for UsedCars Category
     Examples:
       | brandName     | availability |
       | Kia           | exist        |
-      | Hispano Suiza | not exist    |
+      | Hispano Suiza | NOT exist    |

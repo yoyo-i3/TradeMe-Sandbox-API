@@ -31,18 +31,14 @@ public class UsedCarSteps {
     public void getTotalUsedCarBrands(Integer brandCount) {
         Integer count = UsedCarsDetails.getSubcategoryList().size();
         assertThat(count, equalTo(brandCount));
-        System.out.println("\n===============STEP RESULT==================\n");
-        System.out.println("[INFO] Total Number of named brands of used cars available: " + brandCount);
-        System.out.println("\n===============STEP RESULT==================\n");
+        BaseService.writeToResultsFile("[INFO] Total Number of named brands of used cars available: " + brandCount);
     }
 
     @Then("^I verify that brand '(.+)' does (.+) in the Used Cars List$")
     public void verifyBrandAvailabilityInUsedCars(String brandName, String availability) {
         String result = usedCars.subCategoryItemAvailability(usedCarsDetails.getApiResponse(), "Name",
                 brandName, availability);
-        System.out.println("\n===============STEP RESULT==================\n");
-        System.out.println("[INFO] " + result);
-        System.out.println("\n===============STEP RESULT==================\n");
+        BaseService.writeToResultsFile("[INFO] " + result);
         assertThat(result, equalTo(
                 brandName + " brand does " + availability)
         );
@@ -54,12 +50,8 @@ public class UsedCarSteps {
             Integer KiaIndex = usedCars.requestSubCategoryAttribute_getIndex(usedCarsDetails.getApiResponse(),
                     "Name", brandName);
             String message = "The current Number of " + brandName + " cars listed: ";
-            System.out.println("\n===============STEP RESULT==================\n");
-            System.out.println("[INFO] " + message + usedCars.requestSubCategoryAttribute_getValuesList(
+            BaseService.writeToResultsFile("[INFO] " + message + usedCars.requestSubCategoryAttribute_getValuesList(
                     usedCarsDetails.getApiResponse()).get(KiaIndex).get("Number"));
-            System.out.println("\n===============STEP RESULT==================\n");
-
-
         }
     }
 }

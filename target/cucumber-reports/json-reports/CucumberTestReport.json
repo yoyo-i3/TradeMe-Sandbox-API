@@ -1,0 +1,332 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8065022800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I go to the Used Cars Category API",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.onTheUsedCarsApi()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1743437900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I get list of Used Cars Brands",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.getUsedCarBrand()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-30T04:12:04.331Z",
+        "before": [
+          {
+            "result": {
+              "duration": 84021700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.initializeTest()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Get Total Number of used cars brands available",
+        "description": "",
+        "id": "trademe-api-tests-for-usedcars-category;get-total-number-of-used-cars-brands-available",
+        "after": [
+          {
+            "result": {
+              "duration": 1999800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.tearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 360087100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Total Number of named brands of used cars available in the TradeMe UsedCars category is 76",
+            "match": {
+              "arguments": [
+                {
+                  "val": "76",
+                  "offset": 88
+                }
+              ],
+              "location": "stepdefs.UsedCarSteps.getTotalUsedCarBrands(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TradeMeAPI"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 404100300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I go to the Used Cars Category API",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.onTheUsedCarsApi()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 263067300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I get list of Used Cars Brands",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.getUsedCarBrand()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-30T04:12:15.258Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1001100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.initializeTest()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Check Used Car brand availability",
+        "description": "",
+        "id": "trademe-api-tests-for-usedcars-category;check-used-car-brand-availability;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.tearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 806199600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify that brand \u0027Kia\u0027 does exist in the Used Cars List",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Kia",
+                  "offset": 21
+                },
+                {
+                  "val": "exist",
+                  "offset": 31
+                }
+              ],
+              "location": "stepdefs.UsedCarSteps.verifyBrandAvailabilityInUsedCars(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 420105800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I get the current Number of \u0027Kia\u0027 cars listed, if it exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Kia",
+                  "offset": 29
+                }
+              ],
+              "location": "stepdefs.UsedCarSteps.getBrandNumberIfExists(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TradeMeAPI"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 240062100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I go to the Used Cars Category API",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.onTheUsedCarsApi()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42011500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I get list of Used Cars Brands",
+            "match": {
+              "location": "stepdefs.UsedCarSteps.getUsedCarBrand()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-30T04:12:17.191Z",
+        "before": [
+          {
+            "result": {
+              "duration": 997800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.initializeTest()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Check Used Car brand availability",
+        "description": "",
+        "id": "trademe-api-tests-for-usedcars-category;check-used-car-brand-availability;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1003500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefs.ServiceHooks.tearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 139034500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify that brand \u0027Hispano Suiza\u0027 does NOT exist in the Used Cars List",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hispano Suiza",
+                  "offset": 21
+                },
+                {
+                  "val": "NOT exist",
+                  "offset": 41
+                }
+              ],
+              "location": "stepdefs.UsedCarSteps.verifyBrandAvailabilityInUsedCars(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I get the current Number of \u0027Hispano Suiza\u0027 cars listed, if it exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hispano Suiza",
+                  "offset": 29
+                }
+              ],
+              "location": "stepdefs.UsedCarSteps.getBrandNumberIfExists(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TradeMeAPI"
+          }
+        ]
+      }
+    ],
+    "name": "TradeMe API tests for UsedCars Category",
+    "description": "  As a User\n  I want to run Used Cars category APIs\n  so that I can verify Used Cars category returns Used car brands info",
+    "id": "trademe-api-tests-for-usedcars-category",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UsedCarsCategory.feature",
+    "tags": [
+      {
+        "name": "@TradeMeAPI",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
