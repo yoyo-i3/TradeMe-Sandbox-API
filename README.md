@@ -35,10 +35,10 @@ $ mvn test<br>
 
 Reporting
 ---
-Output will be displayed in the terminal for step results wrapped with<br>
-===============STEP RESULT==================<br>
+Go to directory where you cloned the project to view test reports<br>
 <br>
-If using run with cucumber reporting then; <br>
-Go to directory where you cloned the project to view cucumber report<br>
-Open ${your_dir}/TradeMeAPI/target/cucumber-reports/cucumber-html-reports/overview-features.html
-
+Output will be displayed in the testResults* file for test results <br>
+${your_dir}\TradeMe-Sandbox-API\src\test\resources\files\testResults*<br>
+<br>
+If using run with cucumber reporting, to view cucumber html reports; <br>
+Open ${your_dir}\TradeMe-Sandbox-API\target\cucumber-reports\cucumber-html-reports\overview-features.html <br>
